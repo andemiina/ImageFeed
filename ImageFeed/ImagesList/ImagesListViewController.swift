@@ -7,22 +7,24 @@
 
 import UIKit
 
-class ImagesListViewController: UIViewController {
+final class ImagesListViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     //создает массив чисел от 0 до 19 и возвращает массив строк
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
+    
+    //форматирует дату на экране
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
+        formatter.dateFormat = "dd MMMM yyyy"
+        formatter.locale = Locale(identifier: "ru_RU")
         return formatter
     } ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = 200
+        //выстраивает отступы краев у таблицы
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
 }
@@ -38,6 +40,7 @@ extension ImagesListViewController: UITableViewDelegate {
             return 0
         }
         
+        //расчитываем высоту ячейки с фото
         let imageInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
         let imageViewWidth = tableView.bounds.width - imageInsets.left - imageInsets.right
         let imageWidth = image.size.width
@@ -75,14 +78,16 @@ extension ImagesListViewController: UITableViewDataSource {
 
 
 extension ImagesListViewController {
+    //настраиваем ячейку(добавляем изображение/дату/лайк)
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
+        //провряем есть ли изображение, если нет, то ничего не возвращаем
         guard let image = UIImage(named: photosName[indexPath.row]) else {
             return
         }
         
         cell.cellImage.image = image
         cell.dateLabel.text = dateFormatter.string(from: Date())
-        let isLiked = indexPath.row % 2 == 0
+        let isLiked = indexPath.row % 2 == 1
         let likeImage = isLiked ? UIImage(named: "Active") : UIImage(named: "No Active")
         cell.likeButton.setImage(likeImage, for: .normal)
     }
