@@ -30,7 +30,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60U-kf-VTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1509" y="4"/>
+            <point key="canvasLocation" x="-1563" y="101"/>
         </scene>
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
@@ -135,7 +135,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" name="YP Black (iOS)"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFb-91-wGP" userLabel="backwardButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFb-91-wGP" userLabel="backButton">
                                 <rect key="frame" x="8" y="8" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="tdU-mr-zsl"/>
@@ -176,27 +176,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="BwN-FU-Ve6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="BwN-FU-Ve6" userLabel="profileImageView">
                                 <rect key="frame" x="16" y="76" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Yer-3t-vok" userLabel="width = 70"/>
                                     <constraint firstAttribute="width" secondItem="BwN-FU-Ve6" secondAttribute="height" multiplier="1:1" id="qtI-33-QpO"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0n-1h-A6a" userLabel="userNameLabel">
-                                <rect key="frame" x="16" y="154" width="361" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0n-1h-A6a" userLabel="userFullNameTextLabel">
+                                <rect key="frame" x="16" y="154" width="361" height="27.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" name="YP White (iOS)"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvA-27-FVZ" userLabel="nameLabel">
-                                <rect key="frame" x="16" y="190" width="361" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvA-27-FVZ" userLabel="userLoginNameTextLabel">
+                                <rect key="frame" x="16" y="189.66666666666666" width="361" height="15.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" name="YP Gray (iOS)"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J9-HC-WuU" userLabel="statusLabel">
-                                <rect key="frame" x="16" y="214" width="361" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J9-HC-WuU" userLabel="userStatusTextLabel">
+                                <rect key="frame" x="16" y="213.33333333333334" width="361" height="15.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" name="YP White (iOS)"/>
                                 <nil key="highlightedColor"/>
@@ -213,6 +213,51 @@
                                     <action selector="exitButtonClicked:" destination="owp-Gj-1Cu" eventType="touchUpInside" id="lKe-2R-P16"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="taU-8L-XoF" userLabel="profileFavoritesTableView">
+                                <rect key="frame" x="0.0" y="288" width="393" height="481"/>
+                                <color key="backgroundColor" name="YP Black (iOS)"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="158" id="B64-Wx-DVB">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="158"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B64-Wx-DVB" id="VKP-MI-Ktf">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="158"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-sS-tU7">
+                                <rect key="frame" x="16" y="250" width="181" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Избранное" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hac-j1-fl0">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" name="YP White (iOS)"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWe-F3-XrM">
+                                        <rect key="frame" x="141" y="0.0" width="40" height="22"/>
+                                        <color key="backgroundColor" name="YP Blue (iOS)"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="2wL-pf-TXj"/>
+                                            <constraint firstAttribute="width" constant="40" id="EHD-Hl-6zf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" name="YP White (iOS)"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.backgroundColor">
+                                                <color key="value" name="YP Blue (iOS)"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jem-s2-Ba1"/>
                         <color key="backgroundColor" name="YP Black (iOS)"/>
@@ -224,12 +269,18 @@
                             <constraint firstItem="BwN-FU-Ve6" firstAttribute="leading" secondItem="BOm-en-w07" secondAttribute="leading" constant="16" id="Jnp-pn-8PC"/>
                             <constraint firstItem="KvA-27-FVZ" firstAttribute="leading" secondItem="jem-s2-Ba1" secondAttribute="leading" constant="16" id="Lgt-F7-Jrw"/>
                             <constraint firstItem="e0n-1h-A6a" firstAttribute="leading" secondItem="BOm-en-w07" secondAttribute="leading" constant="16" id="Mkf-GQ-qPj"/>
+                            <constraint firstItem="hv7-sS-tU7" firstAttribute="leading" secondItem="jem-s2-Ba1" secondAttribute="leading" constant="16" id="OJs-Cl-zL1"/>
+                            <constraint firstAttribute="trailing" secondItem="taU-8L-XoF" secondAttribute="trailing" id="UFD-3U-FCb"/>
                             <constraint firstItem="2J9-HC-WuU" firstAttribute="trailing" secondItem="KvA-27-FVZ" secondAttribute="trailing" id="Wp4-16-8og"/>
                             <constraint firstItem="jem-s2-Ba1" firstAttribute="trailing" secondItem="e0n-1h-A6a" secondAttribute="trailing" constant="16" id="XCu-pO-xbx"/>
                             <constraint firstItem="BwN-FU-Ve6" firstAttribute="top" secondItem="BOm-en-w07" secondAttribute="top" constant="76" id="bYR-L9-Lpk"/>
                             <constraint firstItem="KvA-27-FVZ" firstAttribute="trailing" secondItem="e0n-1h-A6a" secondAttribute="trailing" id="fiQ-JW-OCj"/>
+                            <constraint firstItem="jem-s2-Ba1" firstAttribute="bottom" secondItem="taU-8L-XoF" secondAttribute="bottom" id="ghc-j1-23n"/>
+                            <constraint firstItem="taU-8L-XoF" firstAttribute="top" secondItem="hv7-sS-tU7" secondAttribute="bottom" constant="16" id="lYX-EW-c5O"/>
                             <constraint firstItem="pkc-RF-4eF" firstAttribute="top" secondItem="BOm-en-w07" secondAttribute="top" constant="99" id="mSd-sK-dhZ"/>
+                            <constraint firstItem="hv7-sS-tU7" firstAttribute="top" secondItem="2J9-HC-WuU" secondAttribute="bottom" constant="21" id="neo-Qh-sCa"/>
                             <constraint firstAttribute="trailing" secondItem="pkc-RF-4eF" secondAttribute="trailing" constant="24" id="oIl-fW-sI6"/>
+                            <constraint firstItem="taU-8L-XoF" firstAttribute="leading" secondItem="BOm-en-w07" secondAttribute="leading" id="rmQ-6u-12b"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_profile_active" id="7JP-m8-Ihq"/>
@@ -243,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czk-au-yox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-529" y="459"/>
+            <point key="canvasLocation" x="-529.00763358778624" y="458.45070422535213"/>
         </scene>
     </scenes>
     <resources>
@@ -256,6 +307,9 @@
         <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="YP Black (iOS)">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="YP Blue (iOS)">
+            <color red="0.21568627450980393" green="0.44705882352941179" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="YP Gray (iOS)">
             <color red="0.68235294117647061" green="0.68627450980392157" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

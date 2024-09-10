@@ -100,7 +100,7 @@ extension ImagesListViewController: UITableViewDataSource {
 extension ImagesListViewController {
     //настраиваем ячейку(добавляем изображение/дату/лайк)
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
-        //провряем есть ли изображение, если нет, то ничего не возвращаем
+        //проверяем есть ли изображение, если нет, то ничего не возвращаем
         guard let image = UIImage(named: photosName[indexPath.row]) else {
             return
         }
