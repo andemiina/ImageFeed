@@ -8,6 +8,7 @@
 import UIKit
 
 final class ImagesListViewController: UIViewController {
+    private let showSingleImageSegueIdentifier = "ShowSingleImage"
 
     @IBOutlet private var tableView: UITableView!
     //создает массив чисел от 0 до 19 и возвращает массив строк
@@ -27,12 +28,31 @@ final class ImagesListViewController: UIViewController {
         //выстраивает отступы краев у таблицы
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == showSingleImageSegueIdentifier { // 1
+                guard
+                    let viewController = segue.destination as? SingleImageViewController, // 2
+                    let indexPath = sender as? IndexPath // 3
+                else {
+                    assertionFailure("Invalid segue destination") // 4
+                    return
+                }
+
+                let image = UIImage(named: photosName[indexPath.row]) // 5
+                _ = viewController.view 
+                viewController.imageView.image = image // 6
+            } else {
+                super.prepare(for: segue, sender: sender) // 7
+            }
+        }
+    
 }
 
 extension ImagesListViewController: UITableViewDelegate {
     //отвечает за действия, которые будут при тапе на ячейку таблицы
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: showSingleImageSegueIdentifier, sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
